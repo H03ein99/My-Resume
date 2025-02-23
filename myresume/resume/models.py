@@ -19,6 +19,15 @@ class Skill(models.Model):
                                        ('Beginner', 'Beginner'),
                                    ])
 
+    def level_to_percentage(self):
+        level_mapping = {
+            'Advanced': 99,
+            'Intermediate': 66,
+            'Beginner': 33
+        }
+        return level_mapping.get(self.proficiency, 0)    
+
+
     def __str__(self):
         return f"{self.name} ({self.proficiency})"
 
