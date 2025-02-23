@@ -60,4 +60,6 @@ class Profile(models.Model):
     age = models.IntegerField()
     degree = models.CharField(max_length=200)
     email = models.EmailField()
-    
+
+    def __str__(self):
+        return f"{self.first_name} - {self.last_name}"
