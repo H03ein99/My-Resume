@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import test
+from resume import views
 
 urlpatterns = [
-    
+    path('', views.index, name='index')
 ]
