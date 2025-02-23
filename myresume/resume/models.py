@@ -31,3 +31,16 @@ class Bio(models.Model):
 
     def __str__(self):
         return "Bio Information"
+    
+class Language(models.Model):
+    name = models.CharField(max_length=100)
+    proficiency = models.CharField(max_length=50)
+
+    choices = [
+        ('Native', 'Native'),
+        ('Fluent', 'Fluent'),
+        ('Advanced', 'Advanced'),
+        ('Intermediate', 'Intermediate'),
+        ('Beginner', 'Beginner')]    
+    def __str__(self):
+        return f"{self.name} - {self.proficiency}"
