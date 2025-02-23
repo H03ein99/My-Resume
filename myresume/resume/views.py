@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from resume.models import *
+from datetime import datetime
 # Create your views here.
 def index(request):
     education = Education.objects.all()
@@ -13,6 +14,7 @@ def index(request):
     about = Bio.objects.all()[0]
     languages = Language.objects.all()
     profile = Profile.objects.all()[0]
+    profile.current_age = datetime.now().year - profile.birthday.year
     project_counter = Project.objects.count()
     context = {
         'education' : education,
