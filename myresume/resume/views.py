@@ -14,6 +14,6 @@ def index(request):
         'projects' : projects,
         'about' : about,
         'languages' : languages,
-        'peofile': profile
+        'profile': profile
     }
     return render(request, 'index.html', context)
