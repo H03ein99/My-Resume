@@ -33,6 +33,7 @@ class Project(models.Model):
 
 class Bio(models.Model):
     bio_text = models.TextField()
+    
 
     def __str__(self):
         return "Bio Information"
@@ -60,6 +61,7 @@ class Profile(models.Model):
     age = models.IntegerField()
     degree = models.CharField(max_length=200)
     email = models.EmailField()
+    about = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} - {self.last_name}"
