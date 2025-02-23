@@ -14,9 +14,9 @@ class Skill(models.Model):
     name = models.CharField(max_length=100)
     proficiency = models.CharField(max_length=50,
                                    choices=[
-                                       'Advanced',
-                                       'Intermediate',
-                                       'Beginner'
+                                       ('Advanced', 'Advanced'),
+                                       ('Intermediate', 'Intermediate'),
+                                       ('Beginner', 'Beginner'),
                                    ])
 
     def __str__(self):
