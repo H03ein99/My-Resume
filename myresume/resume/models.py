@@ -50,3 +50,14 @@ class Language(models.Model):
         
     def __str__(self):
         return f"{self.name} - {self.proficiency}"
+    
+class Profile(models.Model):
+    birthday = models.DateField()
+    first_name = models.CharField(max_length=100)    
+    last_name = models.CharField(max_length=100) 
+    website = models.URLField()
+    city = models.CharField(max_length=250)
+    age = models.IntegerField()
+    degree = models.CharField(max_length=200)
+    email = models.EmailField()
+    
