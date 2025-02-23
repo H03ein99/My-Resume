@@ -9,7 +9,7 @@ class Education(models.Model):
     end_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
-        return f"{self.degree} - {self.institution}"
+        return f"{self.degree} - {self.major} - {self.institution}"
     
 class Skill(models.Model):
     name = models.CharField(max_length=100)
