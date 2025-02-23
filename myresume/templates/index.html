@@ -216,6 +216,14 @@
               <p>{{degree.about}}</p>
             </div><!-- Edn Resume Item -->
             {% endfor %}
+            <h3 class="resume-title">Languages</h3>
+            {% for language in languages %}
+            <div class="resume-item">
+              <h4>{{language.name}}: </h4>
+              <h5>{{language.proficiency}}</h5>
+              
+            </div><!-- Edn Resume Item -->
+            {% endfor %}
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
