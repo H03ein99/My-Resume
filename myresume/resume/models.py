@@ -12,7 +12,12 @@ class Education(models.Model):
     
 class Skill(models.Model):
     name = models.CharField(max_length=100)
-    proficiency = models.CharField(max_length=50)
+    proficiency = models.CharField(max_length=50,
+                                   choices=[
+                                       'Advanced',
+                                       'Intermediate',
+                                       'Beginner'
+                                   ])
 
     def __str__(self):
         return f"{self.name} ({self.proficiency})"
